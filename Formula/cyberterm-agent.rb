@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.1.2-alpha.3"
+  version "0.1.2-alpha.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.3/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "40f801a732379a6401f03ed5d6b09b38d21c3a4fbed9684e466abdb790232c23"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.4/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "05ae4de3c3594138cd46b3c859f61f624d3f94066343cb6af790a46d5388dd47"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.3/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "39402c87a0e71bc4f67dbab1102c9b0727f926fd289045a9cae232744ad9c751"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.4/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "8c931f52c882a69f4e720e24d6a7dbe9316f832ced7af70a63af6065f04ef826"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.3/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f11624b3007d8ded7a8bc00468a91d45341dcafc776491c2f8dffe42cc36c2ec"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.4/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f0d4da5652ce0a3f1b01126f70253675721c850f1a535096e8e209f27c5510b9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.3/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c3d1224b0320518ba4b9090e27a6c1834ce19a265a3d8294c583a9ac6101afea"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.2-alpha.4/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "de5fca97f34c06bd941b6bed02daa44c13662764d789eb71b85d313e05229ed7"
     end
   end
 
