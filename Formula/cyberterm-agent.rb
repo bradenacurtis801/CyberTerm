@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTermAgent/releases/download/v0.1.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "156e962e31c89461643b55e9823eb54e933862a84ba5d122ec1d63c827e45cd0"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.1/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "23259682edcbe50f49e614569295be3c80e10b4e27e8c74f6e772e9def5ea950"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTermAgent/releases/download/v0.1.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "9611f169e2669f6f7a35effb7e2e9845c05a9f2d06bb40b85fa77f09b9c532d5"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.1/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "40a923cfa45c6021b1e04f96014ce69fdf527e0f4618f8f28f45ac7a51612178"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTermAgent/releases/download/v0.1.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c855b9fd3381aad358d4f65fd575cbd2c8f6636055acebe1b0b2b566c0b5b34f"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.1/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0385f54e8eb45878708b655da1c64b9d08fe9916343cab23ef92386477d628d3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTermAgent/releases/download/v0.1.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6c14d9d5d58519f8fc509ab852a4d8c2bd6d12844dd89f98da0f67f988a2d1e3"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.1.1/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "87f517d63ef04d1496a8ad7e98c320adb65115621b8cb7ff4ad068a845b6ccaa"
     end
   end
 
