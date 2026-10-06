@@ -30,9 +30,13 @@ More agents will be added; each one gets its own page under
 
 ```sh
 brew tap bradenacurtis801/cyberterm https://github.com/bradenacurtis801/CyberTerm
+brew trust --formula bradenacurtis801/cyberterm/cyberterm-agent
 brew install cyberterm-agent
 cyberterm-agentd setup
 ```
+
+Homebrew asks you to trust formulas from outside its own repositories.
+The `brew trust` line does that for this one formula only.
 
 ### macOS and Linux, without Homebrew
 
