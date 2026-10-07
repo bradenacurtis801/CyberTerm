@@ -19,7 +19,23 @@ It runs on **macOS** and **Linux**. Windows support is coming.
 | Agent | Status | Details |
 |---|---|---|
 | Claude Code | Supported | [docs/agents/claude-code.md](docs/agents/claude-code.md) |
-| Codex | Coming | |
+| Codex | Coming soon | |
+| OpenCode | Coming soon | |
+| Antigravity | Coming soon | |
+| Cursor | Coming soon | |
+| Kimi Code | Coming soon | |
+| Qwen Code | Coming soon | |
+| Grok Build | Coming soon | |
+| Pi | Coming soon | |
+| OMP | Coming soon | |
+| Hermes | Coming soon | |
+| Qoder | Coming soon | |
+| Factory Droid | Coming soon | |
+| GitHub Copilot | Coming soon | |
+| Amp | Coming soon | |
+| Devin | Coming soon | |
+| OmO | Coming soon | |
+| jcode | Coming soon | |
 
 More agents will be added; each one gets its own page under
 [docs/agents/](docs/agents/).
