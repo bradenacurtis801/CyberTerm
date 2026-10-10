@@ -12,32 +12,40 @@ With it running, the app can:
 - list your agent sessions and show their transcripts;
 - show your agents' usage limits.
 
-It runs on **macOS** and **Linux**. Windows support is coming.
+It runs on **macOS** and **Linux**. Windows support is planned (see the
+[roadmap](#roadmap)).
+
+CyberTerm is in early testing (alpha). Expect rough edges, and please
+[report them](#problems-and-questions).
+
+## How it works
+
+- Your phone talks to this program **over your own SSH connection** to the
+  computer: on your home or office network, or over a VPN you already use.
+  There's no CyberTerm server or account in between.
+- **The app has to be connected to see anything.** While it is, requests,
+  questions and replies show up live. When the app is closed or can't
+  reach the computer, nothing reaches your phone yet: there are no
+  notifications while you're away. Anything still waiting is there when
+  you reconnect.
+- **Your agents keep running on your computer** whether or not your phone
+  is connected. Answering a request from the phone is the same as
+  answering it at the keyboard; the first answer counts.
 
 ## Supported agents
 
 | Agent | Status | Details |
 |---|---|---|
 | Claude Code | Supported | [docs/agents/claude-code.md](docs/agents/claude-code.md) |
-| Codex | Coming soon | |
-| OpenCode | Coming soon | |
-| Antigravity | Coming soon | |
-| Cursor | Coming soon | |
-| Kimi Code | Coming soon | |
-| Qwen Code | Coming soon | |
-| Grok Build | Coming soon | |
-| Pi | Coming soon | |
-| OMP | Coming soon | |
-| Hermes | Coming soon | |
-| Qoder | Coming soon | |
-| Factory Droid | Coming soon | |
-| GitHub Copilot | Coming soon | |
-| Amp | Coming soon | |
-| Devin | Coming soon | |
-| OmO | Coming soon | |
-| jcode | Coming soon | |
+| Codex | Next | Its hooks work the way CyberTerm needs |
+| Gemini CLI | Planned | |
+| OpenCode | Planned | |
+| Amp | Planned | |
 
-More agents will be added; each one gets its own page under
+Other agents (Cursor, GitHub Copilot, Kimi Code, Qwen Code and more) are
+being looked at. An agent can be supported once it lets another program
+see and answer its requests; we only list it here once that works and is
+tested. Each supported agent gets its own page under
 [docs/agents/](docs/agents/).
 
 ## Install
@@ -57,9 +65,14 @@ The `brew trust` line does that for this one formula only.
 ### macOS and Linux, without Homebrew
 
 ```sh
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/bradenacurtis801/CyberTerm/releases/latest/download/cyberterm-agent-installer.sh | sh
+tag=$(curl -fsSL "https://api.github.com/repos/bradenacurtis801/CyberTerm/releases?per_page=1" | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p' | head -n 1)
+curl --proto '=https' --tlsv1.2 -LsSf "https://github.com/bradenacurtis801/CyberTerm/releases/download/$tag/cyberterm-agent-installer.sh" | sh
 cyberterm-agentd setup
 ```
+
+The first line finds the newest release. While CyberTerm is in testing,
+every release is a pre-release, and GitHub's usual "latest release" link
+skips those.
 
 This installs to `~/.local/bin`. If your shell can't find
 `cyberterm-agentd` afterwards, open a new terminal window.
@@ -136,6 +149,26 @@ In short:
 - **Your agents' logins are never read.**
 
 [docs/security.md](docs/security.md) has the details.
+
+## Roadmap
+
+What's coming, roughly in order. Plans can change; this list is kept up
+to date as they do.
+
+1. **Codex.** The same as Claude Code today: its requests, questions,
+   sessions and transcripts in the app.
+2. **Gemini CLI, then OpenCode and Amp.** Each one once it's working and
+   tested; see [Supported agents](#supported-agents).
+3. **Windows.** This program running on Windows computers, not just macOS
+   and Linux.
+4. **Notifications when you're away.** Today the app only hears from your
+   computer while it's connected (see [How it works](#how-it-works)). This
+   adds phone notifications when an agent needs you or finishes, even with
+   the app closed or away from your network. Delivering them takes a small
+   relay service, since phones only get notifications through Apple's and
+   Google's servers. It will be **opt-in**, it will carry only what the
+   notification says (never your code or transcripts), and everything else
+   keeps working without it.
 
 ## Problems and questions
 
