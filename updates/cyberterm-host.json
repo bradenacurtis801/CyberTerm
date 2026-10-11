@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "notes": "https://github.com/bradenacurtis801/CyberTerm/releases/tag/v0.2.0",
+  "pub_date": "2026-10-11T21:18:02Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.2.0/CyberTerm-Host-0.2.0-macos-universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFpFdGliVTBZTmllemV4MXdzcDl2aVFjRTFZWnJSelF6b2ZXQnppaUtBQjlOZXplMWZKbVlMQ3N1clBqVWhRK3k5VGp4UXdQNWxyeG5EWnlXTFcwT0FnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzUzNDQxCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuMi4wCkVHbm5INmw4aGt3eWx0ZVRKeVJ4dVBMejlpSFp3VldkejZFc0tNb2NXQUNtbTF0UW9VS0RxNTBUYzYzQXVOazBNWE9VNUNUb3h4R3NlVGlVaXAySENBPT0K"
+    },
+    "darwin-x86_64": {
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.2.0/CyberTerm-Host-0.2.0-macos-universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFpFdGliVTBZTmllemV4MXdzcDl2aVFjRTFZWnJSelF6b2ZXQnppaUtBQjlOZXplMWZKbVlMQ3N1clBqVWhRK3k5VGp4UXdQNWxyeG5EWnlXTFcwT0FnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzUzNDQxCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuMi4wCkVHbm5INmw4aGt3eWx0ZVRKeVJ4dVBMejlpSFp3VldkejZFc0tNb2NXQUNtbTF0UW9VS0RxNTBUYzYzQXVOazBNWE9VNUNUb3h4R3NlVGlVaXAySENBPT0K"
+    }
+  }
+}
