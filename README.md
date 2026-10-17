@@ -10,10 +10,11 @@ With it running, the app can:
   your answer;
 - tell you when an agent finishes;
 - list your agent sessions and show their transcripts;
+- start and resume agent sessions on the computer, and follow their
+  background tasks;
 - show your agents' usage limits.
 
-It runs on **macOS** and **Linux**. Windows support is planned (see the
-[roadmap](#roadmap)).
+It runs on **macOS**, **Linux** and **Windows**.
 
 CyberTerm is in early testing (alpha). Expect rough edges, and please
 [report them](#problems-and-questions).
@@ -37,8 +38,9 @@ CyberTerm is in early testing (alpha). Expect rough edges, and please
 | Agent | Status | Details |
 |---|---|---|
 | Claude Code | Supported | [docs/agents/claude-code.md](docs/agents/claude-code.md) |
-| Codex | Next | Its hooks work the way CyberTerm needs |
-| Gemini CLI | Planned | |
+| Codex | Supported | [docs/agents/codex.md](docs/agents/codex.md) |
+| Grok Build | Supported | [docs/agents/grok-build.md](docs/agents/grok-build.md) |
+| Antigravity | Supported | [docs/agents/antigravity.md](docs/agents/antigravity.md) |
 | OpenCode | Planned | |
 | Amp | Planned | |
 
@@ -70,12 +72,37 @@ curl --proto '=https' --tlsv1.2 -LsSf "https://github.com/bradenacurtis801/Cyber
 cyberterm-agentd setup
 ```
 
-The first line finds the newest release. While CyberTerm is in testing,
-every release is a pre-release, and GitHub's usual "latest release" link
-skips those.
+The first line finds the newest release, pre-releases included (GitHub's
+usual "latest release" link skips those).
 
 This installs to `~/.local/bin`. If your shell can't find
 `cyberterm-agentd` afterwards, open a new terminal window.
+
+### Windows
+
+In PowerShell:
+
+```powershell
+$tag = (Invoke-RestMethod "https://api.github.com/repos/bradenacurtis801/CyberTerm/releases?per_page=1")[0].tag_name
+irm "https://github.com/bradenacurtis801/CyberTerm/releases/download/$tag/cyberterm-agent-installer.ps1" | iex
+cyberterm-agentd setup
+```
+
+This installs to `%USERPROFILE%\.local\bin`. If PowerShell can't find
+`cyberterm-agentd` afterwards, open a new window.
+
+### The CyberTerm Host app (macOS)
+
+A menu-bar app with the agent inside: it sets everything up, shows a QR
+code to pair your phone, and updates itself.
+
+```sh
+brew tap bradenacurtis801/cyberterm https://github.com/bradenacurtis801/CyberTerm
+brew install --cask cyberterm-host
+```
+
+Or download the `.dmg` from the newest
+[release](https://github.com/bradenacurtis801/CyberTerm/releases).
 
 ### What `setup` does
 
@@ -85,7 +112,10 @@ This installs to `~/.local/bin`. If your shell can't find
    page says exactly what changes.
 2. **Runs CyberTerm in the background.** It starts now, starts again when
    you log in, and restarts if it stops. On macOS that's a launch agent; on
-   Linux, a systemd user service.
+   Linux, a systemd user service; on Windows, a scheduled task that runs
+   while you're signed in.
+3. **On Windows, offers to turn on OpenSSH Server**, which your phone
+   connects through, if it isn't on yet.
 
 Run `setup` again any time, for example after installing another agent; it
 only changes what's needed.
@@ -100,8 +130,10 @@ sudo loginctl enable-linger $USER
 
 ## Connect your phone
 
-In the CyberTerm app, add this computer as an SSH host and connect. The app
-finds the agent on its own; there's nothing to copy or pair.
+Run `cyberterm-agentd pair` (or open the Host app) and scan the QR code
+with the CyberTerm app: your phone gets its own key for this computer.
+Or, in the app, add this computer as an SSH host and connect with your own
+login. Either way the app finds the agent on its own.
 
 ## Everyday commands
 
@@ -110,11 +142,20 @@ finds the agent on its own; there's nothing to copy or pair.
 | `cyberterm-agentd status` | Is it installed and running? |
 | `cyberterm-agentd setup` | Install, repair, or pick up a new version |
 | `cyberterm-agentd uninstall` | Remove the background service and everything it added to your agents' settings |
+| `cyberterm-agentd pair` | Pair a phone: shows a QR code to scan with the app |
+| `cyberterm-agentd devices` | List paired phones (`unpair <id>` removes one) |
 | `cyberterm-agentd run` | Run in the foreground, for troubleshooting (stop the service first) |
 | `cyberterm-agentd --help` | Everything else |
 
 **Logs:** on macOS, `~/Library/Logs/cyberterm/agentd.log`. On Linux, run
-`journalctl --user -u cyberterm-agentd`.
+`journalctl --user -u cyberterm-agentd`. On Windows,
+`%LOCALAPPDATA%\cyberterm\logs\agentd.log`.
+
+**Terminals on Windows** are held by a small helper program,
+`cyberterm-pty-supervisor`, installed beside the agent, so they keep
+running when CyberTerm restarts or upgrades. A newer helper takes over by
+itself once no terminal is running in the old one; `cyberterm-agentd
+update-terminals` does it now (ending those terminals).
 
 ## Upgrade
 
@@ -122,6 +163,10 @@ finds the agent on its own; there's nothing to copy or pair.
 brew upgrade cyberterm-agent    # or run the install script again
 cyberterm-agentd setup          # restarts the background service on the new version
 ```
+
+The Host app updates itself, and the agent inside it with it. The
+CyberTerm app also tells you when a new version is out, and can update the
+agent for you.
 
 ## Other apps that approve your agents' requests
 
@@ -134,8 +179,17 @@ changes another app's settings.
 
 ```sh
 cyberterm-agentd uninstall
-brew uninstall cyberterm-agent   # or: rm ~/.local/bin/cyberterm-agentd ~/.local/bin/cyberterm-agent-hook
+brew uninstall cyberterm-agent   # or: rm ~/.local/bin/cyberterm-agentd ~/.local/bin/cyberterm-agent-hook ~/.local/bin/cyberterm-pty-supervisor
 ```
+
+On Windows, after `cyberterm-agentd uninstall`, delete `cyberterm-agentd.exe`,
+`cyberterm-agent-hook.exe` and `cyberterm-pty-supervisor.exe` from
+`%USERPROFILE%\.local\bin`.
+
+With the Host app: run
+`"/Applications/CyberTerm Host.app/Contents/MacOS/cyberterm-agentd" uninstall`,
+then remove the app (`brew uninstall --cask cyberterm-host`, or drag it to
+the Trash).
 
 ## Security and privacy
 
@@ -155,13 +209,11 @@ In short:
 What's coming, roughly in order. Plans can change; this list is kept up
 to date as they do.
 
-1. **Codex.** The same as Claude Code today: its requests, questions,
-   sessions and transcripts in the app.
-2. **Gemini CLI, then OpenCode and Amp.** Each one once it's working and
-   tested; see [Supported agents](#supported-agents).
-3. **Windows.** This program running on Windows computers, not just macOS
-   and Linux.
-4. **Notifications when you're away.** Today the app only hears from your
+1. **OpenCode and Amp.** Each one once it's working and tested; see
+   [Supported agents](#supported-agents).
+2. **The Host app on Windows**: a signed installer, updating itself, as on
+   macOS.
+3. **Notifications when you're away.** Today the app only hears from your
    computer while it's connected (see [How it works](#how-it-works)). This
    adds phone notifications when an agent needs you or finishes, even with
    the app closed or away from your network. Delivering them takes a small
