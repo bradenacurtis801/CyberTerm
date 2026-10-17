@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.2.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "4638eebf8f1429d9cecfa803913d5ec9879c057c4944134a4b8827c2524d268b"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "a8d03b352c04bc2d04ef69f53005ffd7f4e254c89dc39aa4925a685c51005541"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.2.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "c3663149070413ce15f7cee87eda33ebfc899059cb7889c547ef660305ea453a"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "75668994abac76ca69705d5fdac2869d3d6b73d0dcfccc2659ccf88124b069ea"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.2.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d58e2df7f148f40b3ef97584b12f4dcf7e128e86727b6cb1ffa7985dadabb29a"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3b2fe967d135dfd07fb4e258d42ed12a74df19fe944326480ceec73054e32d1e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.2.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "70f0bb1b92f83d97ad07754380e4a2d00e68efddc3f61774d52a3f2abf972112"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9e3594c898b15a204704f4cdb9fffb396cf115cd709632036d4d77569172145a"
     end
   end
 
@@ -27,6 +27,7 @@ class CybertermAgent < Formula
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
     "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
@@ -47,16 +48,16 @@ class CybertermAgent < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "cyberterm-agent-hook", "cyberterm-agentd"
+      bin.install "cyberterm-agent-hook", "cyberterm-agentd", "cyberterm-pty-supervisor"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "cyberterm-agent-hook", "cyberterm-agentd"
+      bin.install "cyberterm-agent-hook", "cyberterm-agentd", "cyberterm-pty-supervisor"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "cyberterm-agent-hook", "cyberterm-agentd"
+      bin.install "cyberterm-agent-hook", "cyberterm-agentd", "cyberterm-pty-supervisor"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "cyberterm-agent-hook", "cyberterm-agentd"
+      bin.install "cyberterm-agent-hook", "cyberterm-agentd", "cyberterm-pty-supervisor"
     end
 
     install_binary_aliases!
