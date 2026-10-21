@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "a8d03b352c04bc2d04ef69f53005ffd7f4e254c89dc39aa4925a685c51005541"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "5df143db3df8b5d80d0f092ff3ad38f1d9f46096686bfa9b87dfc2021f062475"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "75668994abac76ca69705d5fdac2869d3d6b73d0dcfccc2659ccf88124b069ea"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "78646ed36d881a22cb6cc447e51eef783d330bccba12f986cf117689223ad329"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3b2fe967d135dfd07fb4e258d42ed12a74df19fe944326480ceec73054e32d1e"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "50c86aa9994b6d462abccf2a315d7c2e89df62c28f3b1b8d2f9cc1a010c2d1f9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9e3594c898b15a204704f4cdb9fffb396cf115cd709632036d4d77569172145a"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3bcc4757c4d6443b897d6582b51cfcb492191aa0521a507a2b1234d6b3aa487e"
     end
   end
 
