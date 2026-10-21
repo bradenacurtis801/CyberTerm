@@ -1,15 +1,15 @@
 {
-  "version": "0.3.0",
-  "notes": "https://github.com/bradenacurtis801/CyberTerm/releases/tag/v0.3.0",
-  "pub_date": "2026-10-17T16:23:19Z",
+  "version": "0.4.0",
+  "notes": "https://github.com/bradenacurtis801/CyberTerm/releases/tag/v0.4.0",
+  "pub_date": "2026-10-21T00:34:08Z",
   "platforms": {
     "darwin-aarch64": {
-      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/CyberTerm-Host-0.3.0-macos-universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFR4SVVKTjBjQjNZelZ0ampPUDRsWUNTWUtjSnZ6dlc4aG5IQ3VxTzc3bnlEeHdpdm9EU0V1NHVSbTNzWXJ3cEJ1eXFPaDNMVklCdTlMN1NWSVlkNFFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMjU0MTU5CWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuMy4wCmdSWWVRc1RhTHExM0xybmEzdHY2b045TmVzYVRHYis0UXdwY1prR3NvWjI0RHlTcFU5eUNtUmxpQnc0ZmZRRGJSVUszdHZ0a2ppNU42SzI3ZmJ2OEJ3PT0K"
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.0/CyberTerm-Host-0.4.0-macos-universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFVWV2w3cDRyeFRFVXVGV0NEMHNIanJsVmp6akYyd3lNaW9Hakp3WGlzZjdzdFhSTGNRdWZPRjcvQXFJNHYzWWlPU0lySFkvQmJ5b0xzc3FVT3ZkVkFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQyODAyCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuNC4wClZ0RUR6MHJtS0dBM2lORm03eUIxZVdES2E0VHhURFI4aDBGcEhvTFVlOXdERENwUFBzdGk1MGo2VmxvVnNhLzlLSXJVN0JDaUFHemZTVEhZa2I4OENBPT0K"
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.3.0/CyberTerm-Host-0.3.0-macos-universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFR4SVVKTjBjQjNZelZ0ampPUDRsWUNTWUtjSnZ6dlc4aG5IQ3VxTzc3bnlEeHdpdm9EU0V1NHVSbTNzWXJ3cEJ1eXFPaDNMVklCdTlMN1NWSVlkNFFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMjU0MTU5CWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuMy4wCmdSWWVRc1RhTHExM0xybmEzdHY2b045TmVzYVRHYis0UXdwY1prR3NvWjI0RHlTcFU5eUNtUmxpQnc0ZmZRRGJSVUszdHZ0a2ppNU42SzI3ZmJ2OEJ3PT0K"
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.0/CyberTerm-Host-0.4.0-macos-universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFVWV2w3cDRyeFRFVXVGV0NEMHNIanJsVmp6akYyd3lNaW9Hakp3WGlzZjdzdFhSTGNRdWZPRjcvQXFJNHYzWWlPU0lySFkvQmJ5b0xzc3FVT3ZkVkFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQyODAyCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuNC4wClZ0RUR6MHJtS0dBM2lORm03eUIxZVdES2E0VHhURFI4aDBGcEhvTFVlOXdERENwUFBzdGk1MGo2VmxvVnNhLzlLSXJVN0JDaUFHemZTVEhZa2I4OENBPT0K"
     }
   }
 }
