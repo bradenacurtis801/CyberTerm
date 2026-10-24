@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.1/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "8c5731ad4f9333afd10912f3ee1f5f96c9283fd9c1f41fc6b0304059a5eadfc4"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "d8aae4b514ce5d03f23c418f2f875a45cd5369f00ab438d5d057927c6e149bdd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.1/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "1841d24ebb0ebbf677b3dc3a3282200e3961b5aec0601dc5b857b92f791fd460"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "143fc1a0cfd4b67ff7e634d7dd69138fa7c6b5d73dac7dc7053b2e89e8a0dea7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.1/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e0115b547b4ac7c244eedea8c20c531e3571a08334ff34281f3e8ea2cd628263"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cbc0b5684aa32fb67139fe4df82f5c7852b499bf5e1b0292eb58b5f1a2e1d342"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.4.1/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d6f97261bb19ad5b10ab55d50e0912faae87a43b1ca3c2ef65922b24534fe301"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "719b2dd51963d5e5c9644f9ffc242809426268afafbc923bcf630ce30350382f"
     end
   end
 
