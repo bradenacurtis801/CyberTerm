@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.5.1-alpha.1"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.1-alpha.1/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "916b3fdb7e302704e0f59ac4f3cd5fe6ff05cfa23f661f49f04faf772654cba7"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "c9feb1b25fd5ee9d1251b7064b27299d28201cd55d48472177af5b20b8e6bcb3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.1-alpha.1/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "e7d3b1f3f6b43a963a1ecdd7ceb1ada2576394251c517a3990af710badb8ac4d"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "4019a671c6c6956b7715196dc5e11aaa0d88dd42d1a24fd22fc4d602c4f98971"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.1-alpha.1/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e9a0e9be5b0261944a0c3fa94b0966edd07cdca8eb85f8a6d82b154a0f874413"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0e92a454fc0cab65978892fdb4235aae12fede4a146f0016e4570a5034a3390e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.5.1-alpha.1/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6f1c0afd929062e79f9d124455b998b5db1b578f945950a5614f310f87123fa1"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9d03dde3c9298e7f27fef5a4d9856717ab52f7f3e4e04b05993b7661ec82a8f3"
     end
   end
 
