@@ -1,25 +1,25 @@
 class CybertermAgent < Formula
   desc "CyberTerm host daemon: lets the CyberTerm app approve and follow your coding agents"
   homepage "https://github.com/bradenacurtis801/CyberTerm"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
-      sha256 "c9feb1b25fd5ee9d1251b7064b27299d28201cd55d48472177af5b20b8e6bcb3"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.7.0/cyberterm-agent-aarch64-apple-darwin.tar.xz"
+      sha256 "3aa06e3598a00b584fcc2820fd54079450d6884ccf16643dd51ca6e41977db0a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
-      sha256 "4019a671c6c6956b7715196dc5e11aaa0d88dd42d1a24fd22fc4d602c4f98971"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.7.0/cyberterm-agent-x86_64-apple-darwin.tar.xz"
+      sha256 "f019a0b8bba828d4deb0602bb5c766a292bd975b85410b7a9961a47997e1f171"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0e92a454fc0cab65978892fdb4235aae12fede4a146f0016e4570a5034a3390e"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.7.0/cyberterm-agent-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9137ec64cf4aec76a679567cc0b79f96768a210f40fdb2e320d123b5dc939123"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.6.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9d03dde3c9298e7f27fef5a4d9856717ab52f7f3e4e04b05993b7661ec82a8f3"
+      url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.7.0/cyberterm-agent-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0c1539749d39543b83f55dc54e91720dac076050073b3af32c3cf43b9c8a6c40"
     end
   end
 
