@@ -1,6 +1,6 @@
 cask "cyberterm-host" do
-  version "0.8.0"
-  sha256 "befcf97f27975596168a216d46deceb400bd6b3281ac1a673a0a31bf07fa3195"
+  version "0.9.0"
+  sha256 "af7dc002157199fbb2fab515609a7d6259cf39900ac20500b304aa3e11a876e4"
 
   url "https://github.com/bradenacurtis801/CyberTerm/releases/download/v#{version}/CyberTerm-Host-#{version}.dmg"
   name "CyberTerm Host"

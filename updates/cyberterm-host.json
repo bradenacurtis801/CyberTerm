@@ -1,15 +1,19 @@
 {
-  "version": "0.8.0",
-  "notes": "https://github.com/bradenacurtis801/CyberTerm/releases/tag/v0.8.0",
-  "pub_date": "2026-11-08T18:36:02Z",
+  "version": "0.9.0",
+  "notes": "https://github.com/bradenacurtis801/CyberTerm/releases/tag/v0.9.0",
+  "pub_date": "2026-11-17T21:01:26Z",
   "platforms": {
     "darwin-aarch64": {
-      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.8.0/CyberTerm-Host-0.8.0-macos-universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTGN1QVZkb1BQSVJQc0E5ZXdyQUEyNVlsT3Bya2lDTHRtZEZyZnBhZVA1a0tld3AyRGZ0dm9SRHVpMlhPVERXcUtudmc5a1FXWjVaTEYvbVpCWktrQ0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MTYyOTIwCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuOC4wCi9lM2pBMWxoNzBKdnpSa3c3N0QzUWxkb3ppQlhDMlZxRDZDZXExdzBLdzlncHFueFhTWTEwbVV1Z2NPdzlwUVNrMmdOOE1scVdGdmRRTU9HeE9FZERnPT0K"
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.9.0/CyberTerm-Host-0.9.0-macos-universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFo4OFRRd0p2OFhDNk5qemZQd25HRm9XOGRHbUVyVzVxZmxsOUppYSsvRTQvUkFJVkw3aGFNNFQya3A0clFvZUZ3OUlTeVllaTI2Q2ZiSXF2Y3A3TncwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTQ1MTYyCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuOS4wCkFocHYvMG1rdlVPcWNabW1CYmJlMTF5Y1dKWmF6Uk9RdGkrR09HV1R5YlNTdVQ3SlZZaEFZZjZzMXhnUFd4OGN1cWJBR3RtOEFOUC8zWXBxc25idEF3PT0K"
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.8.0/CyberTerm-Host-0.8.0-macos-universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTGN1QVZkb1BQSVJQc0E5ZXdyQUEyNVlsT3Bya2lDTHRtZEZyZnBhZVA1a0tld3AyRGZ0dm9SRHVpMlhPVERXcUtudmc5a1FXWjVaTEYvbVpCWktrQ0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MTYyOTIwCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuOC4wCi9lM2pBMWxoNzBKdnpSa3c3N0QzUWxkb3ppQlhDMlZxRDZDZXExdzBLdzlncHFueFhTWTEwbVV1Z2NPdzlwUVNrMmdOOE1scVdGdmRRTU9HeE9FZERnPT0K"
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.9.0/CyberTerm-Host-0.9.0-macos-universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFo4OFRRd0p2OFhDNk5qemZQd25HRm9XOGRHbUVyVzVxZmxsOUppYSsvRTQvUkFJVkw3aGFNNFQya3A0clFvZUZ3OUlTeVllaTI2Q2ZiSXF2Y3A3TncwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTQ1MTYyCWZpbGU6Q3liZXJUZXJtIEhvc3QuYXBwLnRhci5negl2ZXJzaW9uOjAuOS4wCkFocHYvMG1rdlVPcWNabW1CYmJlMTF5Y1dKWmF6Uk9RdGkrR09HV1R5YlNTdVQ3SlZZaEFZZjZzMXhnUFd4OGN1cWJBR3RtOEFOUC8zWXBxc25idEF3PT0K"
+    },
+    "windows-x86_64": {
+      "url": "https://github.com/bradenacurtis801/CyberTerm/releases/download/v0.9.0/CyberTerm-Host-0.9.0-windows-x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNklFVjU0QjBXTFFZdHo2eWxCckxSOW9lN00xTmtmdmNEbjRMYm1xZThPSGVGdjI5SERDRU5HNm5ZOXFidS9ZRUlsQ3Y3T1NUUmQ3VUs1ZTBKelkwblZwajYxMWhpd1FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTQ3NTgyCWZpbGU6Q3liZXJUZXJtIEhvc3RfMC45LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuOS4wCjJrK2Uwckx1YmVzdFdaZGYxeGZMdWJQTDJjTWJRRERaWjdVM25teHpKTmJwR050VGdmWjQrbUF3U2Y5cnV3TWptT0psMkpKcDBualZVM21PNkkxakJnPT0K"
     }
   }
 }
